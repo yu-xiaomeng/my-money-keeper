@@ -11,5 +11,5 @@ export default function Statistics() {
 }
 
 Statistics.config = {
-  navigationBarTitleText: '计划'
+  navigationBarTitleText: '统计'
 }

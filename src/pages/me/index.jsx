@@ -1,5 +1,6 @@
-import Taro, { useDidHide } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import Taro from '@tarojs/taro'
+import { View, Text, OpenData } from '@tarojs/components'
+import { AtAvatar } from 'taro-ui'
 import './index.scss'
 
 export default function Me() {
@@ -23,9 +24,9 @@ export default function Me() {
 //   const [user, setUser] = useState({})
 
 
-  useDidHide(() => {
-    clearInterval(this.timer)
-  })
+  // useDidHide(() => {
+  //   clearInterval(this.timer)
+  // })
 
 //   const handleJump = url => {
 //     Taro.navigateTo({
@@ -34,38 +35,12 @@ export default function Me() {
 //   }
 
   return (
-    <View className='me'>
-        <Text>我的</Text>
-
-      {/* <View className='my-box-top'>
-        <Image
-          src={user.avatarUrl}
-          onClick={handleJump.bind(this, '/pages/me/edit/index')}
-        />
-        <View className='info'>
-          <Text className='info-name'>{user.alias}</Text>
-          <Text className='info-contact'>
-            {user.wechatId || user.phone || user.email || ''}
-          </Text>
-        </View>
-        <View
-          className='iconfont iconEdit'
-          onClick={handleJump.bind(this, '/pages/me/edit/index')}
-        />
-      </View> 
-      <View className='my-box-bottom'>
-        {list.map(item => (
-          <View
-            className='my-box-bottom-list'
-            key={item.name}
-            onClick={handleJump.bind(this, item.url)}
-          >
-            <Text className={'icon iconfont ' + item.iconLeft}></Text>
-            <Text className='text'>{item.name}</Text>
-            <Text className='iconfont iconArrow'></Text>
-          </View>
-        ))}
-      </View> */}
+    <View className='my-box-top'>
+      <AtAvatar size='large' circle openData={{ type: 'userAvatarUrl'}}></AtAvatar>
+      <View className='info'>
+        <OpenData className='info-name' type='userNickName'></OpenData>
+        <Text className='info-contact'>要加油记账哦！</Text>
+      </View>
     </View>
   )
 }

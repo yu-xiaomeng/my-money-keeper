@@ -35,13 +35,11 @@
     "@tarojs/taro": "2.0.7",
     "@tarojs/taro-alipay": "2.0.7",
     "@tarojs/taro-h5": "2.0.7",
-    "@tarojs/taro-qq": "2.0.7",
-    "@tarojs/taro-quickapp": "2.0.7",
     "@tarojs/taro-rn": "2.0.7",
-    "@tarojs/taro-swan": "2.0.7",
-    "@tarojs/taro-tt": "2.0.7",
     "@tarojs/taro-weapp": "2.0.7",
     "babel-runtime": "^6.26.0",
+    "eslint-staged": "^1.0.1",
+    "mirror-config-china": "^2.5.1",
     "nerv-devtools": "^1.5.5",
     "nervjs": "^1.5.5",
     "regenerator-runtime": "0.11.1",
@@ -67,11 +65,11 @@
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-react-hooks": "^1.6.1",
     "eslint-plugin-taro": "2.0.7",
+    "lint-staged": "^10.0.7",
     "react": "^16.13.1",
     "react-native": "^0.63.0",
     "stylelint": "9.3.0",
     "stylelint-config-taro-rn": "2.0.7",
-    "stylelint-taro-rn": "2.0.7",
-    "stylus": "^0.54.7"
+    "stylelint-taro-rn": "2.0.7"
   }
 }

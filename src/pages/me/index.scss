@@ -1,0 +1,28 @@
+.my-box-top {
+    display: flex;
+    align-items: center;
+    padding: 48px 50px 51px 50px;
+    justify-content: space-between;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        padding-left: 58px;
+    
+        .info-name {
+          padding-bottom: 15px;
+          font-size: $font-size-large;
+          font-weight: bold;
+          width: 600px;
+        }
+
+        .info-contact {
+            color: $gray;
+            font-size: $font-size-small;
+            max-width: 400px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+  }

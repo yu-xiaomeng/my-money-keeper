@@ -1,6 +1,6 @@
-import Taro, { Component } from '@tarojs/taro'
+import Taro, { Component} from '@tarojs/taro'
 import Index from './pages/index'
-
+import './styles/theme.scss'
 import './app.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools

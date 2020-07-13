@@ -1,6 +1,19 @@
+// eslint-disable-next-line import/no-commonjs
+const path = require('path')
+
+// NOTE 在 sass 中通过别名（@ 或 ~）引用需要指定路径
+const sassImporter = function(url) {
+  const reg = /^@styles\/(.*)/
+  return {
+    file: reg.test(url)
+      ? path.resolve(__dirname, '..', 'src/styles', url.match(reg)[1])
+      : url
+  }
+}
+
 const config = {
-  projectName: 'bookkeeping',
-  date: '2020-7-11',
+  projectName: 'mySession',
+  date: '2020-2-13',
   designWidth: 750,
   deviceRatio: {
     '640': 2.34 / 2,
@@ -12,24 +25,42 @@ const config = {
   babel: {
     sourceMap: true,
     presets: [
-      ['env', {
-        modules: false
-      }]
+      [
+        'env',
+        {
+          modules: false
+        }
+      ]
     ],
     plugins: [
       'transform-decorators-legacy',
       'transform-class-properties',
       'transform-object-rest-spread',
-      ['transform-runtime', {
-        'helpers': false,
-        'polyfill': false,
-        'regenerator': true,
-        'moduleName': 'babel-runtime'
-      }]
+      [
+        'transform-runtime',
+        {
+          helpers: false,
+          polyfill: false,
+          regenerator: true,
+          moduleName: 'babel-runtime'
+        }
+      ]
     ]
   },
-  plugins: [],
-  defineConstants: {
+  plugins: {
+    sass: {
+      importer: sassImporter
+    }
+  },
+  defineConstants: {},
+  alias: {
+    '@assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@components': path.resolve(__dirname, '..', 'src/components'),
+    '@utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@styles': path.resolve(__dirname, '..', 'src/styles')
+  },
+  sass: {
+    resource: [path.resolve(__dirname, '..', 'src/styles/variables.scss')]
   },
   mini: {
     postcss: {
@@ -60,11 +91,7 @@ const config = {
       autoprefixer: {
         enable: true,
         config: {
-          browsers: [
-            'last 3 versions',
-            'Android >= 4.1',
-            'ios >= 8'
-          ]
+          browsers: ['last 3 versions', 'Android >= 4.1', 'ios >= 8']
         }
       },
       cssModules: {
@@ -78,7 +105,7 @@ const config = {
   }
 }
 
-module.exports = function (merge) {
+module.exports = function(merge) {
   if (process.env.NODE_ENV === 'development') {
     return merge({}, config, require('./dev'))
   }
