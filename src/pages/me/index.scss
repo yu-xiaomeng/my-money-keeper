@@ -26,3 +26,34 @@
     }
 
   }
+
+.my-box-bottom {
+  margin-left: 40px;
+  margin-right: 59px;
+
+  .my-box-bottom-list {
+    height: 87px;
+    padding-left: 23px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+      font-size: 36px;
+      padding-right: 12px;
+      color: $color-brand;
+    }
+
+    .iconArrow {
+      font-size: 26px;
+      color: $color-gray-0;
+    }
+
+    .text {
+      flex: 1;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+}  

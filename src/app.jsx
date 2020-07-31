@@ -24,7 +24,8 @@ class App extends Component {
       'pages/index/index',
       'pages/statistics/index',
       'pages/plan/index',
-      'pages/me/index'
+      'pages/me/index',
+      'pages/setting/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -67,7 +68,6 @@ class App extends Component {
         }
       ]
     }
-
   }
 
   // 在 App 类中的 render() 函数没有实际作用

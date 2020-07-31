@@ -4,23 +4,23 @@ import { AtAvatar } from 'taro-ui'
 import './index.scss'
 
 export default function Me() {
-//   const list = [
-//     {
-//     //   iconLeft: 'iconSubscription',
-//       name: '设置',
-//       url: '/pages/team/index'
-//     },
-//     {
-//     //   iconLeft: 'iconAbout',
-//       name: '关于',
-//       url: '/pages/about/index'
-//     },
-//     {
-//     //   iconLeft: 'iconFeedback',
-//       name: '吐个槽',
-//       url: `/pages/about/index`
-//     }
-//   ]
+  const list = [
+    {
+    //   iconLeft: 'iconSubscription',
+      name: '设置',
+      url: '/pages/setting/index'
+    },
+    {
+    //   iconLeft: 'iconAbout',
+      name: '关于',
+      url: '/pages/about/index'
+    },
+    {
+    //   iconLeft: 'iconFeedback',
+      name: '吐个槽',
+      url: `/pages/feedback/index`
+    }
+  ]
 //   const [user, setUser] = useState({})
 
 
@@ -28,13 +28,14 @@ export default function Me() {
   //   clearInterval(this.timer)
   // })
 
-//   const handleJump = url => {
-//     Taro.navigateTo({
-//       url
-//     })
-//   }
+  const handleJump = url => {
+    Taro.navigateTo({
+      url
+    })
+  }
 
   return (
+    <View class='my-box'>
     <View className='my-box-top'>
       <AtAvatar size='large' circle openData={{ type: 'userAvatarUrl'}}></AtAvatar>
       <View className='info'>
@@ -42,6 +43,20 @@ export default function Me() {
         <Text className='info-contact'>要加油记账哦！</Text>
       </View>
     </View>
+    <View className='my-box-bottom'>
+      {list.map(item => (
+        <View
+          className='my-box-bottom-list'
+          key={item.name}
+          onClick={handleJump.bind(this, item.url)}
+        >
+          <Text className={'icon iconfont ' + item.iconLeft}></Text>
+          <Text className='text'>{item.name}</Text>
+          <Text className='iconfont iconArrow'></Text>
+        </View>
+      ))}
+    </View>
+  </View>
   )
 }
 

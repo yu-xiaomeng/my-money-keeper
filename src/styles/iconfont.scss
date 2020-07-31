@@ -16,6 +16,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.iconCalendar:before {
+.iconArrow:before {
+    content: '\e66a';
+}
+
+.iconBreakfast:before {
     content: '\e63e';
-  }
+}
+
+.iconLunch:before {
+    content: '\e61f';
+}
+
+.iconDinner:before {
+    content: '\e61d';
+}
