@@ -41,7 +41,7 @@ class App extends Component {
           pagePath: 'pages/index/index',
           iconPath: './assets/images/bookkeeping.png',
           selectedIconPath: './assets/images/bookkeeping-selected.png',
-          text: '记账'
+          text: '首页'
         },
         {
           pagePath: 'pages/statistics/index',
