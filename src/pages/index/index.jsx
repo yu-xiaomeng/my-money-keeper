@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtList, AtListItem } from "taro-ui"
+import { AtList, AtListItem, AtButton } from "taro-ui"
 import './index.scss'
 
 export default class Index extends Component {
@@ -44,9 +44,17 @@ export default class Index extends Component {
     navigationBarTitleText: '小梦记账'
   }
 
+  goToTrackingDailyCost() {
+    Taro.navigateTo({
+      url: '/pages/trackingDailyCost/index'
+    })
+  }
   render () {
     return (
       <View className='index'>
+        <View className='tools'>
+        <AtButton type='primary' size='small' onClick={this.goToTrackingDailyCost}>记账</AtButton>
+        </View>
         <AtList>
           <AtListItem
             title='早餐'

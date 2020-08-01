@@ -25,7 +25,8 @@ class App extends Component {
       'pages/statistics/index',
       'pages/plan/index',
       'pages/me/index',
-      'pages/setting/index'
+      'pages/setting/index',
+      'pages/trackingDailyCost/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -49,11 +50,6 @@ class App extends Component {
           selectedIconPath: './assets/images/statistics-selected.png',
           text: '统计'
         },
-        // {
-        //   pagePath: 'pages/statistics/index',
-        //   iconPath: './assets/images/add-index.png',
-        //   selectedIconPath: './assets/images/add-index.png'
-        // },
         {
           pagePath: 'pages/plan/index',
           iconPath: './assets/images/plan.png',
