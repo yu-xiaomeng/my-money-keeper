@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import { AtList, AtListItem, AtButton } from "taro-ui"
 import './index.scss'
 
@@ -53,7 +53,10 @@ export default class Index extends Component {
     return (
       <View className='index'>
         <View className='tools'>
-        <AtButton type='primary' size='small' onClick={this.goToTrackingDailyCost}>记账</AtButton>
+        <AtButton type='primary' size='small' onClick={this.goToTrackingDailyCost}>
+          <Text className='iconfont iconAdd'></Text>
+            记账
+          </AtButton>
         </View>
         <AtList>
           <AtListItem
