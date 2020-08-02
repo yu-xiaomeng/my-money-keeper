@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 const cloud = require('wx-server-sdk');
 
 cloud.init({
