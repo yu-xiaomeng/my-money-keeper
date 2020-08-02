@@ -31,7 +31,8 @@ async function main(event, context) {
 
   if(user) {
     return {
-      message: "loginOK"
+      message: "loginOK",
+      userId: user._id
     }
   } else {
       user = new User({ openId });
@@ -45,11 +46,13 @@ async function main(event, context) {
         });
       } catch (e) {
         return {
-          message: "failed to create user"
+          message: "failed to create user",
+          userId: null
         }
       }
       return {
-        message: "create a new user"
+        message: "create a new user",
+        userId: user._id
       }
     }
 }

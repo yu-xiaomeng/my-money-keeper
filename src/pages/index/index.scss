@@ -1,14 +1,23 @@
-.index {
+.top-box {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+
+  .book-name {
+    flex: auto;
+    padding-left: 15px;
+    font-size: 36px;
+    color: $color-brand;
+  }
 
   .tools {
     width: 150px;
     height: 90px;
-    padding: 20px 5px 0px 560px; 
+  }
 
-    .iconfont {
-      font-size: 28px;
-      padding-right: 12px;
-    }
+  .iconfont {
+    font-size: 28px;
+    padding-right: 12px;
   }
 
 }

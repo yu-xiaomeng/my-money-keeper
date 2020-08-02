@@ -1,0 +1,11 @@
+{
+  "name": "getdefaultbook",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "^2.1.1"
+  }
+}
